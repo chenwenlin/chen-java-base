@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.7.18</version>
+    </parent>
+
+    <groupId>com.chen.bizcenter.common</groupId>
+    <artifactId>chen-bizcenter-base</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>chen-bizcenter-base-main</module>
+        <module>chen-bizcenter-base-mybatis</module>
+        <module>chen-bizcenter-base-utils</module>
+        <module>chen-bizcenter-base-constants</module>
+        <module>chen-bizcenter-base-redis</module>
+        <module>chen-bizcenter-base-log</module>
+        <module>chen-bizcenter-base-validator</module>
+    </modules>
+
+    <properties>
+        <base-denpenice-version>1.0-SNAPSHOT</base-denpenice-version>
+        <base-version>1.0-SNAPSHOT</base-version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.chen.bizcenter.common</groupId>
+                <artifactId>chen-bizcenter-dependencies</artifactId>
+                <version>${base-denpenice-version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>com.chen.bizcenter.common</groupId>
+                <artifactId>chen-bizcenter-base-constants</artifactId>
+                <version>${base-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.chen.bizcenter.common</groupId>
+                <artifactId>chen-bizcenter-base-log</artifactId>
+                <version>${base-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.chen.bizcenter.common</groupId>
+                <artifactId>chen-bizcenter-base-main</artifactId>
+                <version>${base-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.chen.bizcenter.common</groupId>
+                <artifactId>chen-bizcenter-base-mybatis</artifactId>
+                <version>${base-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.chen.bizcenter.common</groupId>
+                <artifactId>chen-bizcenter-base-redis</artifactId>
+                <version>${base-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.chen.bizcenter.common</groupId>
+                <artifactId>chen-bizcenter-base-utils</artifactId>
+                <version>${base-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.chen.bizcenter.common</groupId>
+                <artifactId>chen-bizcenter-base-validator</artifactId>
+                <version>${base-version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>
